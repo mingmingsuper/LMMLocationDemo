@@ -48,7 +48,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate
         mLocationManager = CLLocationManager()
         mLocationManager?.delegate = self
         mLocationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        mLocationManager?.distanceFilter = 1000.0
+        mLocationManager?.distanceFilter = kCLDistanceFilterNone
         mLocationManager?.requestWhenInUseAuthorization()
         mLocationManager?.requestAlwaysAuthorization()
     }
