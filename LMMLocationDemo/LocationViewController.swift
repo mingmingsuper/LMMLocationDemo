@@ -132,6 +132,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate
         mLatText.text = String(format: "%3.5f", arguments: [currentLocation.coordinate.latitude])
         mLngText.text = String(format: "%3.5f", arguments: [currentLocation.coordinate.longitude])
         mAltText.text = String(format: "%3.5f", arguments: [currentLocation.altitude])
+        self.mLocationManager?.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
